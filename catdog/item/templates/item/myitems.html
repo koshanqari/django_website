@@ -1,0 +1,49 @@
+{% extends 'core/base.html' %}
+
+
+{% block products %}
+
+{% comment %} 
+{% for item in items %}
+<img src="{{item.image.url}}" alt="NOT UPDATED">
+{{item.name}}
+{{item.price}}
+{{item.description}}
+{% endfor %} {% endcomment %}
+
+
+<div class="row row-cols-1 row-cols-md-3 g-4 d-flex justify-content-center my-5 py-5">
+    {% for item in items %}
+    <div class="card mx-4" style="width: 18rem;">
+        <img src="{{item.image.url}}" alt="NOT UPDATED" style="height:250px">
+        <div class="card-body">
+        <h5 class="card-title">{{item.name}}</h5>
+        <p class="card-text">Price: Rs. {{item.price}}</p>
+        <p class="card-text">{{item.description}}</p>
+        <a href="whatsapp://send?text=Hi there, I would like to by {{item.name}}, for {{item.price}} having description as {{item.description}} &phone={{ph}}" class="btn btn-primary">Talk with us</a>
+        </div>
+    </div>
+    {% endfor %}
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock products %}

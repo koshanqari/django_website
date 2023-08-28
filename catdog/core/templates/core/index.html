@@ -1,0 +1,527 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+
+
+<!-- ======= hero Section ======= -->
+{% block hero %}
+<section id="hero">
+  <div class="hero-container">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+      <ol id="hero-carousel-indicators" class="carousel-indicators"></ol>
+
+      <div class="carousel-inner" role="listbox">
+
+        <div class="carousel-item active" style="background-image: url('{% static "img\hero-carousel\4.jpeg"%}')">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Find Your Perfect Companion</h2>
+              <p class="animate__animated animate__fadeInUp">Explore our wide range of pets and find your new best
+                friend.</p>
+              <a href="#services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item" style="background-image: url('{% static "img\hero-carousel\5.jpg"%}')">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Premium Pet Supplies</h2>
+              <p class="animate__animated animate__fadeInUp">We offer high-quality pet supplies to keep your furry friend happy and healthy.
+              </p>
+              <a href="#services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item" style="background-image: url('{% static "img\hero-carousel\6.jpg"%}')">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Expert Care and Advice</h2>
+              <p class="animate__animated animate__fadeInUp">Our team of experienced professionals is here to provide you with expert pet care advice.</p>
+              <a href="#services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+  </div>
+</section>
+{% endblock hero %}
+<!-- End Hero Section -->
+
+
+{% block main %}
+
+<!-- ======= Services Section ======= -->
+<div id="services" class="services-area area-padding mb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="section-headline services-head text-center">
+          <h2>Categories</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row text-center">
+
+
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="about-move">
+          <div class="services-details">
+              <div class="single-services" >
+                <a class="services-icon" href="{% url 'food' %}">
+                  <i class="bi bi-briefcase"></i>
+                </a>
+              
+                <h4>Food</h4>
+                <p>
+                    Offering a wide variety of high-quality pet food brands for different types of pets
+                </p>
+                <a href="{% url 'food' %}"> 
+                <button type="button" style="background-color:#3ec1d5; border-style:none; border-radius:50px" class="btn btn-primary">Click Here</button>
+                </a> 
+
+              </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class=" about-move">
+          <div class="services-details">
+            <div class="single-services">
+              <a class="services-icon" href="{% url 'toys' %}">
+                <i class="bi bi-bar-chart"></i>
+              </a>
+              <h4>Toys</h4>
+              <p>
+                Offering a wide range of toys that engage pets' minds and challenge their problem-solving skills.
+              </p>
+                <a href="{% url 'toys' %}"> 
+                  <button type="button" style="background-color:#3ec1d5; border-style:none; border-radius:50px" class="btn btn-primary">Click Here</button>
+                </a> 
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <!-- end col-md-4 -->
+        <div class=" about-move">
+          <div class="services-details">
+            <div class="single-services">
+              <a class="services-icon" href="{% url 'accessories' %}">
+                <i class="bi bi-binoculars"></i>
+              </a>
+              <h4>Accessories</h4>
+              <p>
+                Find the perfect collar and leash, cozy bed, brushes, combs, and grooming tools for your pet
+              </p>
+              <a href="{% url 'accessories' %}"> 
+                <button type="button" style="background-color:#3ec1d5; border-style:none; border-radius:50px" class="btn btn-primary">Click Here</button>
+              </a>
+            </div>
+          </div>
+          <!-- end about-details -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Left services -->
+<!-- End Services Section -->
+
+
+
+<!-- ======= Testimonials Section ======= -->
+<div id="testimonials" class="testimonials">
+  <div class="container">
+
+    <div class="testimonials-slider swiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+            <h3>Syed Kamran</h3>
+            <h4>Elahibagh Srinagar</h4>
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Just shopped with enough toys and treats to rival a petting zoo! My wallet's lighter, but my heart's fuller, my fur babies are in for a treat literally!
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+            <h3>Nonam Shah</h3>
+            <h4>Lalbazar</h4>
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Just had a virtual shopping spree at UrbanPets - my fingers got more exercise scrolling through all the goodies than my pets will from their new toys!
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+            <h3>Hasaan Kawsar</h3>
+            <h4>Lalbazar</h4>
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Clicked my way into UrbanPets' online wonderland and ended up with a cart full of treats, toys, and accessories. My pets might not get the concept of online shopping, but they'll definitely enjoy the surprises!
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+            <h3>Muneeb Qazi</h3>
+            <h4>lalbazar</h4>
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Haa acha store hay, muje padne doo ab, baadmai call karna
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+</div>
+<!-- End Testimonials Section -->
+
+
+
+
+<!-- ======= Team Section ======= -->
+<div id="team" class="our-team-area area-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="section-headline text-center">
+          <h2>Our special Team</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      {% comment %} row here {% endcomment %}
+      <div class="col-md-4 col-sm-3 col-xs-12">
+        <div class="single-team-member">
+          <div class="team-img">
+            <a href="">
+              <img src="assets/img/team/1.jpg" alt="">
+            </a>
+            <div class="team-social-icon text-center">
+              <ul>
+                <li>
+                  <a href="#">
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="bi bi-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="bi bi-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="team-content text-center">
+            <h4>Saadat Majid</h4>
+            <p>Founder</p>
+          </div>
+        </div>
+      </div>
+      <!-- End column -->
+      <div class="col-md-4 col-sm-3 col-xs-12">
+        <div class="single-team-member">
+          <div class="team-img">
+            <a href="">
+              <img src="assets/img/team/2.jpg" alt="">
+            </a>
+            <div class="team-social-icon text-center">
+              <ul>
+                <li>
+                  <a href="#">
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="bi bi-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="bi bi-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="team-content text-center">
+            <h4>Minal Manzoor</h4>
+            <p>Chief Executive Officer</p>
+          </div>
+        </div>
+      </div>
+      <!-- End column -->
+      <div class="col-md-4 col-sm-3 col-xs-12">
+        <div class="single-team-member">
+          <div class="team-img">
+            <a href="">
+              <img src="" alt="">
+            </a>
+            <div class="team-social-icon text-center">
+              <ul>
+                <li>
+                  <a href="#">
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="bi bi-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="bi bi-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="team-content text-center">
+            <h4>Koshan Qari</h4>
+            <p>Chief Technical Officer</p>
+          </div>
+        </div>
+      </div>
+      <!-- End column -->
+    </div>
+  </div>
+</div>
+<!-- End Team Section -->
+
+
+<!-- ======= Blog Section ======= -->
+<div id="blog" class="blog-area">
+  <div class="blog-inner area-padding">
+    <div class="blog-overly"></div>
+    <div class="container ">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="section-headline text-center">
+            <h2>Why you should be a pet parent</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+
+
+        <!-- Start Left Blog -->
+        <div style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; padding: 30px" class="col-md-4 col-sm-4 col-xs-12">
+          <div class="single-blog">
+            <div class="blog-text">
+              <h4>
+                Unconditional Companionship
+
+              </h4>
+              <p>
+                Pets offer genuine affection, emotional support, and a unique bond, alleviating feelings of loneliness and stress. Their presence creates a meaningful relationship founded on trust and affection
+
+              </p>
+            </div>
+          </div>
+          <!-- Start single blog -->
+        </div>
+        <!-- End Left Blog-->
+
+        <!-- Start Left Blog -->
+        <div style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; padding: 30px" class="col-md-4 col-sm-4 col-xs-12">
+          <div class="single-blog">
+            <div class="blog-text">
+              <h4>
+                Responsibility and Care
+
+              </h4>
+              <p>
+                Owning a pet means assuming the role of caregiver, responsible for their physical and mental well-being. This involves providing proper nutrition, exercise, grooming, and medical attention to ensure their health and happiness.
+              </p>
+            </div>
+          </div>
+          <!-- Start single blog -->
+        </div>
+        <!-- End Left Blog-->
+
+        <!-- Start Left Blog -->
+        <div style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; padding: 30px" class="col-md-4 col-sm-4 col-xs-12">
+          <div class="single-blog">
+            <div class="blog-text">
+              <h4>
+                Lifestyle Adjustments
+
+              </h4>
+              <p>
+                Welcoming a pet requires adjustments to routines and lifestyle. Establishing consistent routines for feeding, exercise, and playtime encourages a more active and structured life, fostering positive habits
+              </p>
+            </div>
+          </div>
+          <!-- Start single blog -->
+        </div>
+        <!-- End Left Blog-->
+        
+      </div>
+    </div>
+  </div>
+</div><!-- End Blog Section -->
+
++
+<!-- ======= Contact Section ======= -->
+<div id="contact" class="contact-area">
+  <div class="contact-inner area-padding">
+    <div class="contact-overly"></div>
+    <div class="container ">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="section-headline text-center">
+            <h2>Contact us</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Start contact icon column -->
+        <div class="col-md-4">
+          <div class="contact-icon text-center">
+            <div class="single-icon">
+              <i class="bi bi-phone"></i>
+              <p>
+                Call<br>
+                <span>7051449274</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Start contact icon column -->
+        <div class="col-md-4">
+          <div class="contact-icon text-center">
+            <div class="single-icon">
+              <i class="bi bi-envelope"></i>
+              <p>
+                Email<br>
+                <span>urbanpetsonline@gmail.com</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Start contact icon column -->
+        <div class="col-md-4">
+          <div class="contact-icon text-center">
+            <div class="single-icon">
+              <i class="bi bi-geo-alt"></i>
+              <p>
+                Location<br>
+                <span>Pan Srinagar</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+
+        <!-- Start Google Map -->
+        <div class="col-md-6">
+          <!-- Start Map -->
+          <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=400&amp;height=400&amp;hl=en&amp;q=srinagar&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://gachanymph.com/">Gacha Nymph Download</a></div><style>.mapouter{position:relative;text-align:right;width:400px;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:400px;height:400px;}.gmap_iframe {width:400px!important;height:400px!important;}</style></div>
+          <!-- End Map -->
+        </div>
+        <!-- End Google Map -->
+
+        <!-- Start  contact -->
+        <div class="col-md-6">
+          <div class="form contact-form">
+
+            <form id="whatsappForm" action="#" method="post" role="form" class="php-email-form">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit" onclick="gotowhatsapp()">Send Message</button></div>
+            </form>
+
+          </div>
+        </div>
+        <!-- End Left contact -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script>
+  function gotowhatsapp() {
+      
+      var name = document.getElementById("name").value;
+      var subject = document.getElementById("subject").value;
+      var message = document.getElementById("message").value;
+  
+      var url = "https://wa.me/917051449274?text=" 
+      + "Name: " + name + "%0a"
+      + "Subject: " + subject + "%0a"
+      + "Message: " + message; 
+  
+      window.open(url, '_blank').focus();
+  }
+  </script>
+<!-- End Contact Section -->
+
+
+
+
+
+
+
+{% endblock main %}
